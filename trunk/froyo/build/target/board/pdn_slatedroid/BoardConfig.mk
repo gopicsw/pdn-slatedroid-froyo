@@ -1,0 +1,35 @@
+# BoardConfig.mk
+#
+# Product-specific compile-time definitions.
+# PDN-SlateDroid BoardConfig.mk
+# Modified By HaTaX
+#
+
+TARGET_NO_BOOTLOADER := true
+TARGET_NO_KERNEL := true
+TARGET_NO_RADIOIMAGE := true
+TARGET_CPU_ABI := armeabi
+TARGET_BOARD_PLATFORM := s3c6410
+TARGET_ARCH_VARIANT := armv5te-vfp
+WITH_JIT := true
+TARGET_GLOBAL_CFLAGS += -mtune=arm1176jzf-s -mfpu=vfp
+TARGET_GLOBAL_CPPFLAGS += -mtune=arm1176jzf-s -mfpu=vfp
+BOARD_USES_ALSA_AUDIO := true
+BOARD_USES_GENERIC_AUDIO := true
+
+#HAS_RALINK_WPA_SUPPLICANT_SUPPORT=y
+BOARD_WPA_SUPPLICANT_DRIVER := PDN3070
+WIFI_DRIVER_MODULE_PATH := /system/lib/modules/rt3070sta.ko
+WIFI_DRIVER_MODULE_NAME := rt3070sta
+BOARD_HAVE_BLUETOOTH := true
+USE_CAMERA_STUB := true
+
+TARGET_HARDWARE_3D := true
+HARDWARE_OMX := true
+OMX_JPEG := true
+OMX_VENDOR := samsung
+OMX_VENDOR_INCLUDES := \
+#BOARD_VENDOR_USE_AKMD := true
+#USE_PV_WINDOWS_MEDIA := true
+#BOARD_USE_HTC_APPS := true
+
